@@ -58,6 +58,21 @@ npx nodemon src/app.js
 
 ---
 
+## Architecture Overview
+
+The system follows a layered architecture:
+
+Client → API Routes → Service Layer → API Client → CurseForge API → Response Formatter
+
+### Layers
+
+- Routes: Handle incoming HTTP requests
+- Services: Business logic and data transformation
+- API Client: External CurseForge API communication
+- Utilities: Optional caching and helpers
+
+This separation ensures scalability and maintainability.
+
 ## 🔒 Security & Compliance
 
 - Uses official CurseForge API only
