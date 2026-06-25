@@ -73,6 +73,19 @@ Client → API Routes → Service Layer → API Client → CurseForge API → Re
 
 This separation ensures scalability and maintainability.
 
+---
+
+## API Flow
+
+1. Client sends request: `/api/mods/search?q=skyblock`
+2. Route validates input
+3. Service processes request
+4. API client calls CurseForge API
+5. Response is normalized
+6. Clean JSON returned to client
+
+---
+
 ## 🔒 Security & Compliance
 
 - Uses official CurseForge API only
